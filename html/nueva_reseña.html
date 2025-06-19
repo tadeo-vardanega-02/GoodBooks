@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GoodBooks - Nueva Reseña</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body
+    class="relative flex size-full min-h-screen flex-col bg-[#131416] dark group/design-root overflow-x-hidden"
+    style='font-family: Newsreader, "Noto Sans", sans-serif;'
+  >
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c3035] px-10 py-3"
+      >
+        <div class="flex items-center gap-4 text-white">
+          <div class="size-4">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2
+            class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+          >
+            GoodBooks
+          </h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8">
+          <div class="flex items-center gap-9">
+            <a
+              class="text-white text-sm font-medium leading-normal"
+              href="/html/pagina_inicio.html"
+              >Inicio</a
+            >
+            <a
+              class="text-white text-sm font-medium leading-normal"
+              href="/html/recomendaciones.html"
+              >Recomendaciones</a
+            >
+            <a
+              class="text-white text-sm font-medium leading-normal"
+              href="/html/reseñas.html"
+              >Reseñas</a
+            >
+            <a
+              class="text-white text-sm font-medium leading-normal underline"
+              href="/html/nueva_reseña.html"
+              >Nueva reseña</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="flex flex-1 justify-center items-center px-40 py-5">
+        <div
+          class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1"
+        >
+          <h2
+            class="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5"
+          >
+            Cargar nueva reseña de libro
+          </h2>
+
+          <form action="/submit_review.php" method="post" class="px-4">
+        <!-- Title -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Título del libro
+          <input
+            type="text"
+            name="title"
+            placeholder="Nombre del libro"
+            required
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white"
+          />
+        </label>
+
+        <!-- Price -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Precio
+          <input
+            type="number"
+            step="0.01"
+            name="price"
+            placeholder="Precio en USD"
+            required
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white"
+          />
+        </label>
+
+        <!-- profileName -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Nombre de Perfil
+          <input
+            type="text"
+            name="profileName"
+            placeholder="Nombre del perfil"
+            required
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white"
+          />
+        </label>
+
+        <!-- review/score -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Puntaje de la reseña
+          <input
+            type="number"
+            step="0.1"
+            min="0"
+            max="5"
+            name="review_score"
+            placeholder="Puntaje (0 a 5)"
+            required
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white"
+          />
+        </label>
+
+        <!-- review/summary -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Resumen de la reseña
+          <input
+            type="text"
+            name="review_summary"
+            placeholder="Resumen breve"
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white"
+          />
+        </label>
+
+        <!-- review/text -->
+        <label class="flex flex-col mb-4 text-white font-medium">
+          Texto de la reseña
+          <textarea
+            name="review_text"
+            placeholder="Escribe la reseña completa aquí"
+            rows="6"
+            class="form-input mt-1 rounded-xl bg-[#1e2124] border border-[#41474e] p-3 text-white resize-none"
+          ></textarea>
+        </label>
+
+        <button
+          type="submit"
+          class="w-full bg-[#bcd0e5] text-[#131416] font-bold rounded-full py-3 tracking-wide hover:bg-[#a0b1c2]"
+        >
+          Guardar reseña
+        </button>
+      </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

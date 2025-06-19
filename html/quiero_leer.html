@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>GoodBooks</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#131416] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c3035] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">GoodBooks</h2>
+            </div>
+            <div class="flex items-center gap-9">
+            <a class="text-white text-sm font-medium leading-normal" href="/html/pagina_inicio.html">Inicio</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseñas.html">Reseñas</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseña_por_genero.html">Géneros</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/quiero_leer.html">Quiero Leer</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/nueva_reseña.html">Nueva Reseña</a>
+          </div>
+          </div>
+          <div class="flex flex-1 justify-end items-center gap-4">
+          <!-- LOGIN si no hay usuario -->
+          <a
+            id="loginBtn"
+            href="/html/login.html"
+            class="flex cursor-pointer items-center justify-center rounded-xl h-10 bg-[#2c3035] text-white px-4 text-sm font-bold tracking-[0.015em] no-underline"
+          >
+            LOGIN
+          </a>
+
+          <!-- Nombre de usuario si está logueado -->
+          <span
+            id="userNameDisplay"
+            class="hidden text-white text-sm font-medium"
+          ></span>
+        </div>
+
+        <script>
+        // Simulación de sesión: poné el nombre si logueado
+        // En producción, reemplazá esta lógica por tu manejo real (PHP, sessionStorage...).
+        const username = null; // ej. 'tadeo'; o null si no logueado
+
+        if (username) {
+          document.getElementById('loginBtn').classList.add('hidden');
+          const span = document.getElementById('userNameDisplay');
+          span.textContent = username;
+          span.classList.remove('hidden');
+        }
+        </script>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Want to Read</p></div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">All (1)</h3>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-white text-base font-bold leading-tight">The Secret Garden</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Frances Hodgson Burnett</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 flex-row-reverse bg-[#2c3035] text-white text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Remove</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyUZq0hqYWyZmWRXJtPYu4G7VHUaf1faMD4BzX6-rI0puwRkVfRwLZIf7jnDgrROUaSlBF2mAQQXC1VBpjDeSLwqGLqjelB2jePIC5XC-fBOMMaJT4UJKnkdEIrlIkt5rYgTju9Ke2CVmEB4Sn89l9Gwf6pyB5Lv7VYcoiN54ciLXjNKTQMXtgMIc0eZMDlLv41nLbdLt4qEaIxNlUTGLEpjL1U7fs6Gw9XiZ3TAmjkBQMvKaIpOyXFqa1WPp6SJ9Pq1wKClCYBuND");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+  document.addEventListener('click', function(event) {
+    const clickedElement = event.target.closest('a, button, input, textarea, label, select');
+    if (!clickedElement) {
+      // Si no es un elemento interactivo conocido, redirige al verificador PHP
+      window.location.href = "/verificar_sesion.php";
+    }
+  });
+</script>
+  </body>
+</html>

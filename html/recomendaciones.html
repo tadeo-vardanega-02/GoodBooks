@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>GoodBooks</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#131416] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c3035] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Good Books</h2>
+            </div>
+            <div class="flex items-center gap-9">
+            <a class="text-white text-sm font-medium leading-normal" href="/html/pagina_inicio.html">Inicio</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseñas.html">Reseñas</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseña_por_genero.html">Géneros</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/quiero_leer.html">Quiero Leer</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/nueva_reseña.html">Nueva Reseña</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                <div
+                  class="text-[#a3abb2] flex border-none bg-[#2c3035] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#2c3035] focus:border-none h-full placeholder:text-[#a3abb2] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#2c3035] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoJgXMdlMakwNz45vhcD1oYwv-wmLgVzwXD2nM4iNPE87-sGOJhYXShCX4mMP-wWCmdiGz9dB5BCc8cJSi20CFkLbTDhBCkl5nZOUTrI91RE2x7z71p0-mqd2EnqmwON-hWME5JX4WOBfIF28kXR5bulxpqZK_oEZ4bVwQGFuxBcw_zKEEU8beklrs1PtFFtX0Cl28uYX86LsEtNOdsh4FP5Ey0eFAOh1w-aBhqEtMd1UWgjIRVoxl1WeeriY2-N5fzZSAVgeK1-2p");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Recommendations for you</p>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Based on your reading history</h3>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSTTSOeHt-2fA6ZW7nsCxm7A83fwm1YK-E375P2ZI7-zPrdUzwzbY-dIIwaDSnq5SnLkXx5jLKsKpBTA98GANV0C2Ntkyk9N3ukT9psvp9d9MZ4Qra8sRpG0UmtZXRbJ8H-TERzGWeCjJcFoUvtZ_earD59cHXYe_wVB20SbQa52EaN9Eiknw0A-mnAOXwx1LFbsD2l0hUMcYSHmU0addtajQGJHY9DAbqXl5L4ad2dBckLJsfVLlB8j04CBDY2BVYtYFn2IQNQRb_");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Whispering Woods</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A tale of magic and adventure</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDakIoqRkp1s1Nf0E0v2dOoRGkK802nsLDS_Q7S1JGXA-Y3vS0MrKIYOzynbEIRDZJXASMOUDRhmmLnk1p6Vrfm4mjPvYNw0MfYPbbOfFbL0urdzLEFttwnVH2qekGUKjtZTnmf2qU1gWT5GK1-z-1KWQpSLyQGJwXktXk_FPJRdTBbaazIaNg34BeTGNDJqRhdcWrNjhvS3rkWjadPaVmHo_fLxq0aahxedY5MG0dDDQC445r57ozYvmWatMIv-dGMswpLluHwM3RI");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Echoes of Tomorrow</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Exploring the future of humanity</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXWbB1l1n2gsK1exU2a_1aj9LBIEhK_KTSomY3bXGHwS9Cv--e7Y9L7QuBGWr4AMZNhdmzHMtruanY8A46IUQnUoH5V1U_KKYmT7YRHuDlSisiyVshxOW1ZnJ65LoriwVQW9mSzrT9L1xIZ2flWFrameOIABEXGgqTmiCy61YgUTzOnPB4wpkIsXvyA_1d2F9oG5ZY7uP_u6yRgtHux7osE5IJy88L9dS8HbNlAf2wD7wS1Xpok-kYGpffrfGbHzgHzMht7l8xZDxq");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Silent Witness</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A detective's toughest case</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAtYC-dP5XdCvQuF8_3MDd9lZJoJ5OORpKqma4ZuzWGsOBtGknQ47qdw_zWP_Nkoq8BeIfpDtx0pMw7SuWF6ioOZjySKkK8XoWhXbzkHlzpIRLYFp8D9EuL0MBI1obTrz_fxSAsT8IBbNo6ctgptTa7vrlKe4l4UneZWZwA-VK9xoZfra1MlFus_dZE0eB4WquGjCt9xSBDG2Fu-eSkWreyTjnI5ApivHCsa_cwz5LDKw37g9vWXiFEh5XsoPq4aKEaamGX71aOK8R");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Chronicles of Eldoria</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A journey through a forgotten land</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5tsz59Py4e_hK7ORQ6r77fqNxkmQF1NsljznIMtW7dWs0lMdVNThDigsClp7QkpssCd-NSEfNiy2fXwz6MBCpCVaGvEhXuDqcNYBpiiYNeNXAzDbVsFoSMNPsWDIp3puiH7aWDhkxCcVxG9N71GOhNjjgLHJLt0DQLqzZO9FmUjPiZ5o6_NFsrsZcVB97NuerUO5w_fo8R-MdNls5o_y36Z-iqjfgG1K0LoSOQvi-rTrjqhofXBPTJqkTnD1vn809MSOIhe2TAw-W");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Shadows of Deception</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Unraveling a web of lies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Popular in your favorite genres</h3>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAM7-Xt2W8h3WGF4BjQExN0hBK2Mn1jtUyyT7prhRM-Aq1Jhx1SLAloipPZaMusCq-b7hOLfa68gPIQIKS-WTsZMmUxU5E50d4XwYOYblZ0FaHcERjEAXteStNSP6hJqXdDinR3_6fuXNRgzEKM1xtkBx4cD6q8qAiQhKrwjnstxPpfPJeip1DcLv_oEuObBR2xkvb32-mRUl4T7q7zXTx7RylkGUWHLsdeGZ9S0TpWDbmQCly6dwdv0EDl26SMkCqv5a0GoA86YmcY");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Eternal Embrace</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A love story for the ages</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfWO2WIXR_8SJNE-FZ4Ae9DyTRorC34ojsa2MYGLgKUzE-_XZ20ctEyNUxOVvEFiEEUVUC2UYdFjXvsyk62O91CfszrLRmYQ19FgO3aFN7Aqt4rh6moix8mDUFMq0Cou6VlS1Zz1KtUT_tc0h5vDmRN90Ro112SSN2etZnOUMrf1vnoZLB1YapL4mG5rMzwFD2t8YxGStgePIji3Gjyjtym5jnDRA2N2O_ejwdTJ4Rdw0r9NzrnZjwfdNez0pnCOeIQlaLpZmfUNp2");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">City Lights</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Life in the modern world</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZ7GGQcvAlMyRjHrDNrG36vcruIMYhLNMNde98NU44VGIhROM1InTQqGsFcxzlIZpVj-iOLbwNJHCfD11118n_4cvNtsrGlGzGb-ZuBbj0_n67rkc1l1nmcx6O1DYrKZao1s5yA8kLJOoLRAQFIJn047VaFxEXHRTYUJH8bXabbOvQzv7fmn52QDTw6QtyAkNzdWJlTp0kmzomYebc8hBlMZihxkgRtOPh5U-GBnx4cGw607VRkGJSb79cme_MiE8hc8AUjaLMpHIe");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Chosen One</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A teenager's journey of self-discovery</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBt2NqID94m-DpxXoaA0jQIZPgDgrqWsDxrSgnn96zMA-b_Q4nP6Zfc4lVrJkY7xhacHwsJ4XuwkuMnHS-VW6LX5SXkb74ARB-QYpp29fZ2ayUw9XiAkcadQ-fVjEYWaSXZ8dtswbH1GhhiZd5hEFtRjNHtM-qMnIm9IuudWa1HTRguRsTVIlIh9-OvLfO0dhCJD28WdeS8jZBhIBvTq4MAoya3EsN3tSsD9RnprgDrZKqeqgoQk8fs_UGdj5n-lDO0EcNhBf2kLyYC");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Realm of the Ancients</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Magic and mythical creatures</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDF36zstGh6kZxxipCVNXPtrxtCh7XdA3twXhBTpQNMBtIhFgttJgHo_XyrovM5KQT-0aMnurMNCdN0QuwLTFDtbo0RwpFSxagcv2LkMbPjmzFXOauh9lNA0rR1r3ZWE1Mi8obksBvg3spl1yY6L_Jn-jRIei7Hh5crOrMahu6kUA46BE_J8sBVHhUTylZoIv77IATz7N3-5vhzQVNXabsL676jkGnvH8VsXz9wANP6xdpt5NP69iYt-dP0TkJvTKO2NhdHaVHbvvIH");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Galactic Odyssey</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Exploring the cosmos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Because you liked 'The Whispering Woods'</h3>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8KTrUb_adKh0jBHT4ZtYsmiLIgU2452RzQdkY4RuL8O6lRDePbVCfFM7OdRwAU4kWwpZruwzeWSk4Eo2CemFe7FseyUYFdzNtuNtIYTdE6LVkSoc1clur-__SRr9paRku6YQyb7qBe62Nrp_QvDYpz9rVQkuJOsRGbqQnWYWCbOGoAh7iPNm6s-nHdaMKrbziZmbdc6PNY8JKu06qCEpuP-zRNV-79V33uE4_PEWydXDSsNqs9YP9QwUdfJnl6YAzZSNJ-uTm-h14");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Dragon's Legacy</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A dragon's hidden treasure</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDL_PQH-knQASWJKAE-30jUKVFLWhNgP0Rxv58EPhqL1G8HrVgMy8nikLhWfH8iQDV_ljQnEQND1wwHMk_27AabyJfaGrrkJ0SkFAOffFicPF9traZqazR2atFGaCcgkHNPkgQRRyUu13rqzqynppWI2OPvay0ZxA7lMfEe18rAde-EKyP0Cw6iIVxY6ocnRe78SKwlzfWSip_TL868PuzlAoR8aNfWaFdza7p8qnVV7jiAOvUY9rRfBhMPh350AT-pVoW4AH6JcHtc");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Quest for the Lost City</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">An explorer's daring adventure</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoANv7IFz4174YR0JR10igtDH4l2cWQ8tWYnkVepJSkq1ArRDJllDIwwzVTdqgt2NWL2fnJIa1ujW2CkmIVXIKU1b5bZZE2NrtvFl6vfNxjG53V9epWF1jWZmKPHl9fWJ3eB0x88AOBcHtKbEuOqQ8PqVnpVQdUOwXuwf89hwnRYwZKGl-nDbG7TuWNjrlWOYGrn8coJNsloMUGMCwnCBQoI622FgD1QDFVp3HW2u4YVCsnxjMt6hlZmzlNaaJHpw9AYV4VLoxjY8J");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Secrets of the Sorcerer</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A sorcerer's hidden knowledge</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRs_OZhZm5m8wm-fIXUa8kh-1QLSuWq1TO5P9uYGIGbYFnQa9TEIOsSWPvp3Iwuws4HWfTz-nUaNExB6yvpfGE14UCLDPoDBLdFk7A0MS89hO_FgPYGvbB3LIR93y67NBRQBuwAyPC9fqZPTw1zOD2tO_8_zFoMKL5oD5Kn_ADGSi7-FB-oCIcgrpMRtt0XN8Pi8U2w1_LP-XcqtelDbCBzb1Jy0XzVHTMVXyx87j61sYPgbuXeigtg8qQfUWlGcwJY9reKQonFa4u");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Legends of the Griffin</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Mythical creatures and their tales</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsFK-Nv4h5KU13W0wYcMTsRIHDcuxlFOzXA6DGF5H9m1DdQ1xAk15qSINAKxekw0dZHU_tk6wUep_9_7DQwhWccreYmd6sBxRNF4mbn4dKoCr_vtTpjETe38mXn4bKjBNQjINB09R5qbLrgkaRIhI0PE400fTT5ZqRcKTzuayjXs8ZhVO6cs8pfCJQ95FSe50w6lcxyJK4ZcGK3B_SCmRMmjdVcFdt8rX8h5fMs5dtJUqpHPQqrsFZR1tru9tguUQT30DwNfFbiCqd");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Great Divide</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A battle for the ages</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

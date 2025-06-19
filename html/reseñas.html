@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>GoodBooks</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#131416] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c3035] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">GoodBooks</h2>
+            </div>
+            <div class="flex items-center gap-9">
+            <a class="text-white text-sm font-medium leading-normal" href="/html/pagina_inicio.html">Inicio</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseñas.html">Reseñas</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseña_por_genero.html">Géneros</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/quiero_leer.html">Quiero Leer</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/nueva_reseña.html">Nueva Reseña</a>
+          </div>
+          </div>
+          <div class="flex flex-1 justify-end items-center gap-4">
+          <!-- LOGIN si no hay usuario -->
+          <a
+            id="loginBtn"
+            href="/html/login.html"
+            class="flex cursor-pointer items-center justify-center rounded-xl h-10 bg-[#2c3035] text-white px-4 text-sm font-bold tracking-[0.015em] no-underline"
+          >
+            LOGIN
+          </a>
+
+          <!-- Nombre de usuario si está logueado -->
+          <span
+            id="userNameDisplay"
+            class="hidden text-white text-sm font-medium"
+          ></span>
+        </div>
+
+        <script>
+        // Simulación de sesión: poné el nombre si logueado
+        // En producción, reemplazá esta lógica por tu manejo real (PHP, sessionStorage...).
+        const username = null; // ej. 'tadeo'; o null si no logueado
+
+        if (username) {
+          document.getElementById('loginBtn').classList.add('hidden');
+          const span = document.getElementById('userNameDisplay');
+          span.textContent = username;
+          span.classList.remove('hidden');
+        }
+        </script>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap gap-2 p-4">
+              <a class="text-[#a3abb2] text-base font-medium leading-normal" href="#">Home</a>
+              <span class="text-[#a3abb2] text-base font-medium leading-normal">/</span>
+              <span class="text-white text-base font-medium leading-normal">Book Review</span>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">The Midnight Library</p>
+                  <p class="text-[#a3abb2] text-sm font-normal leading-normal">Matt Haig</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWN-2wecQfkzqKBYUjWw1gXyLAbjJSOnuzTP6dAPumbA4FlItoOUt9dJwz2STrxFKXgNavQ5EGEqDN36XN2E3IaubruwC2zZpA-3RkAr0-mYtoVJe9ooOfeA0iIrus05yCWjbA0SvNMY4yt0TSVAVq3hSFUM4k-x4ZU0nxt8f11aqJJBjPLf-KbNwM7IYGOG28HOBAKNOsi7GLOObYNF1C6tH5BoIbj6q6YdtNI2vk7Wf3gKD9d-CY5vvx6_0wcmq9Co_P-mmMlcD4");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Summary</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Nora Seed finds herself facing a series of unfortunate events, leading her to a library between life and death. Here, she has the chance to explore different versions
+              of her life, each representing a choice she made or didn't make. As she navigates these alternate realities, Nora grapples with questions of regret, fulfillment, and
+              the true meaning of happiness.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Full Review</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Matt Haig's 'The Midnight Library' is a thought-provoking exploration of life's what-ifs. The novel's premise is captivating, inviting readers to reflect on their own
+              choices and the paths not taken. Haig's writing is both accessible and profound, making complex philosophical ideas relatable. While the narrative occasionally veers
+              into the predictable, the emotional depth and the ultimate message of self-acceptance resonate strongly. This book is a comforting reminder that our lives, with all
+              their imperfections, are worth living.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Rating</h2>
+            <div class="flex flex-wrap gap-x-8 gap-y-6 p-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">4.5</p>
+                <div class="flex gap-0.5">
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-white text-base font-normal leading-normal">125 reviews</p>
+              </div>
+              <div class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-y-3">
+                <p class="text-white text-sm font-normal leading-normal">5</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#41474e]"><div class="rounded-full bg-white" style="width: 40%;"></div></div>
+                <p class="text-[#a3abb2] text-sm font-normal leading-normal text-right">40%</p>
+                <p class="text-white text-sm font-normal leading-normal">4</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#41474e]"><div class="rounded-full bg-white" style="width: 30%;"></div></div>
+                <p class="text-[#a3abb2] text-sm font-normal leading-normal text-right">30%</p>
+                <p class="text-white text-sm font-normal leading-normal">3</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#41474e]"><div class="rounded-full bg-white" style="width: 15%;"></div></div>
+                <p class="text-[#a3abb2] text-sm font-normal leading-normal text-right">15%</p>
+                <p class="text-white text-sm font-normal leading-normal">2</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#41474e]"><div class="rounded-full bg-white" style="width: 10%;"></div></div>
+                <p class="text-[#a3abb2] text-sm font-normal leading-normal text-right">10%</p>
+                <p class="text-white text-sm font-normal leading-normal">1</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#41474e]"><div class="rounded-full bg-white" style="width: 5%;"></div></div>
+                <p class="text-[#a3abb2] text-sm font-normal leading-normal text-right">5%</p>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Comments</h2>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMJ4UrC7DZiMsw2csnxL8W1JWLPWwK_tnChgUp4Jpwkx0R1WjpM-JKiQEHU7pdXUlo2iBfKJNHC98WJRhAD_dxnO_jIG4yKOrUfPLn52ahTAumcUptLFA1tdLh1Ggjt4_u6AO7nVga19oquHjfXAlZChfdSPwt1KEY9hV7xF_HvSWTXBxc9q1yfJL9XbS60nDUuhrQ5Cic8X-8sJOGF5pJkYoCi9RiDv4-ldxKn4VNnIuRq8pdtjxC6NB5y2fA21jNEY-nQDdYYW4I");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Sophia Clark</p>
+                  <p class="text-[#a3abb2] text-sm font-normal leading-normal">2 weeks ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  This book really made me think about my life choices. It's a beautiful story about second chances and finding your place in the world.
+                </p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB62lZR0eqgRpg-LdzWtRn8DIECRew63ijPuqCc_v2-YonZkV0EimIgdSd752ztbmjut17BQEMGLzwPqz-hI2-hvl7Q3gx4cnD8bGnpID0zReOipGK6pJnAiiqT9UIPZ_ctkni9UhrpyMw4L_Hu2EveXiyJx12PG49gGwEVM81t-g4hQylCwR5cpGpHCIeXHlqYyaRCvwWSay2stcUK7-6cDA_-JoEnH6oogUq8nH1K1zAFfQq9HG47W2Rg6WpyD7pDHUKIkXfxoIA6");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Ethan Walker</p>
+                  <p class="text-[#a3abb2] text-sm font-normal leading-normal">1 month ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  I enjoyed the concept, but I felt the execution was a bit simplistic. Still, a worthwhile read for anyone contemplating life's big questions.
+                </p>
+              </div>
+            </div>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4 pl-[68px]">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjMMgSNCo-KbqSwQ3RZZvR-aV9EGoTPZBzpNTJaMqSZqtwPcjDwjWJ51LcN4AH1pu9eCHK6BUbB0ohcW3EAgot2tUk-zbxRhNZlKVdwrUyLVtiI6-3nW_E6BlRx19aD4e7ujw9iTkHFIQG2vtrsHuI5gOcvexHLZ-HnSYjCOFYejCPOVQFu2KeS101XWi7ACr-h-L5s4ZtiZ019EEmc2qGpsddO4gnmorLu7Yhb360idUEyxsTxCsbMCS7jP4G1_nyNASTFup-V4hn");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Olivia Bennett</p>
+                  <p class="text-[#a3abb2] text-sm font-normal leading-normal">3 weeks ago</p>
+                </div>
+                <p class="text-white text-sm font-normal leading-normal">
+                  I agree with Sophia. This book is a gem. It's both heartwarming and heartbreaking, and it stays with you long after you finish reading.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+  document.addEventListener('click', function(event) {
+    const clickedElement = event.target.closest('a, button, input, textarea, label, select');
+    if (!clickedElement) {
+      // Si no es un elemento interactivo conocido, redirige al verificador PHP
+      window.location.href = "/verificar_sesion.php";
+    }
+  });
+</script>
+  </body>
+</html>

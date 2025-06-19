@@ -1,0 +1,270 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>GoodBooks</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#131416] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#2c3035] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">GoodBooks</h2>
+            </div>
+            <div class="flex items-center gap-9">
+            <a class="text-white text-sm font-medium leading-normal" href="/html/pagina_inicio.html">Inicio</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseñas.html">Reseñas</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/reseña_por_genero.html">Géneros</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/quiero_leer.html">Quiero Leer</a>
+            <a class="text-white text-sm font-medium leading-normal" href="/html/nueva_reseña.html">Nueva Reseña</a>
+          </div>
+          </div>
+          <div class="flex flex-1 justify-end items-center gap-4">
+          <!-- LOGIN si no hay usuario -->
+          <a
+            id="loginBtn"
+            href="login.html"
+            class="flex cursor-pointer items-center justify-center rounded-xl h-10 bg-[#2c3035] text-white px-4 text-sm font-bold tracking-[0.015em] no-underline"
+          >
+            LOGIN
+          </a>
+
+          <!-- Nombre de usuario si está logueado -->
+          <span
+            id="userNameDisplay"
+            class="hidden text-white text-sm font-medium"
+          ></span>
+        </div>
+
+        <script>
+        // Simulación de sesión: poné el nombre si logueado
+        // En producción, reemplazá esta lógica por tu manejo real (PHP, sessionStorage...).
+        const username = null; // ej. 'tadeo'; o null si no logueado
+
+        if (username) {
+          document.getElementById('loginBtn').classList.add('hidden');
+          const span = document.getElementById('userNameDisplay');
+          span.textContent = username;
+          span.classList.remove('hidden');
+        }
+        </script>
+
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Explore by Genre</p></div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Fiction</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDEfAve0g8rkXUa1Ej_kl0WvSfGLLL6FsMYaJbhBSqMnJ-zESK2a2SlE9OIJl5cpJo-rl566m0dI176Fto_MiJS1hR3kxQ167x1EEZd5xZO50TugwAcIEa2oMDW276w0Q_pJwra96Tnh1cy0Lgliai--cHwW_xQ8lfR4gSazBm5WWCOgTPFngenFWDqZZQ25CWmER4sakLNdNmXP4ade7HWwFvlqZbsjZg4iJ0bsAaa9tsmh6iguh8BrMTxlXrqgfpXb_2H05bP04f");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Secret Garden</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A young girl discovers a hidden garden with magical secrets.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6xgzTnEMw0TGZyP9icxyw1h4D88N2kbx5ilo7UWDv7LH_zanvAAiw04pl3GcgBnZSyUVBJAXDrCOc1SRCg0v9KoU5F6AsAzFHioeZDEnqtVYkUROuHgEOkmK1ltA91t5XIiYHCu_eBOi9OL48R9VtM2PDGppv8fhEsybgof81BC-Jh9c1n1vG5fFp2PuwOUayCGCk43A_7llIQxvh0c2HfRSddckA6uUMDLKsq-ZcI7Lz5V1CWKEceX7GkbP82__WfmiBNttERY3y");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Silent Observer</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A detective investigates a series of mysterious disappearances.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-JeMM77qwudX7_9RyrtjntUJ6bhOwA4oj2kaxmhgOOF9vU7ZMkF3suurIxJnOigB3qvwROmLbOzkg_biuLG7I68YW0ocJR0PgS_BbAT_9rdK1wv1eEuCwlRmOf2CwAKAKP_9OZ2gJN2nsGeX9r2lQoPYS0Bo2tqSV01J9C_CFyqO6Nv3t783nHwcP4M5J6hcdFrQpQtqwedbrE-27VXMMmGS_UI_OnWm3RPkGH-IPa2ZEyFrRoPU_oolC9s9JnVQAckwU2tGNswhT");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Echoes of the Past</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A historian uncovers a forgotten chapter of history.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpNk7XsEqxPIgQSCdcT2FssCDqbTJ2KUKVvn7OjIgW7BEuFErROFhJiJRXlFzXGnPeObrB3Q4lfl4aGdz2uVrAHucCbfL4XaWuUwO4Dm6BUGRgdbrVHQGSParRASDcfKao9YEfrdwAcOBf4WlPg8jljNN7XkGEVnADQ__RPkXVYvIsZyHI3Olvb6ePRGgd6zNjlCU6AuY1udaWD6UMJsTAGeQM1W3V-Tl2V_XMMTV-XNylS6vZn9MaXYdtO915IlNyJ-pwNemGda6S");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Last Lighthouse</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A lighthouse keeper guards a secret that could change everything.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNDMpvLO36eA_Ueeq99-6IPhTUwWxOqiUcD52PaZoe7hDE7b6kofgp6WqKGxmdVQ6k06vDgYs1wuyW9CohZfMR_5BwXHy8RF9UJVLVQay3cgGpTQY0QNxi8IbeBlHaBE3sxQo0zrjtdVcFY8IlqT_SgFhlGbNTlE6lr_XQCk_8_ZJ06ZhDMb9NNqJJavBA5gaRodSEWj55SKxn-jcwmivWsSOWFS57OkmspZQBpZcV7sVRObjQGccjxp5Yu16z8Zb4BCkvhopQKmPZ");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Whispers of the Wind</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A traveler encounters strange phenomena in a remote village.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c3035] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">View More Fiction</span>
+              </button>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Non-Fiction</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCS_O_F9wNd0ovWfSgVAj_k7tISsRk88kW4V11DKzrGrByghrdXsR7lnVqiI4idNCPATzZ5UatHZ5s4dgZF1cpKDVJAG0yeW6OKinN7n7uSh3GlYKrHOHrpHqsbn5nGv6LzRmm96U1Z627B_aOdgXRkDl1CGEOdViWYyfmGBaKVp856wmu7kYIPmC2qZ3VNthDSqcnmCTSWlWOeNO66n9Rlq3mfcyI6B1FdVMyYUPzgVvwBNpMFyMEWqqc0d8CBC5w9aaCKUPXKa6po");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Power of Habit</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">Explore the science of habit formation and how to change your habits.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOIHLWotJevMN6_WtEX42rO9B7JtdjIQWUSbrjRV-NKaqG5mh4E0TyTLyg3QiqMoCE9y74XGUQvJiVeNv0MpvEUqlh4VLW-MJbyXIV4ZaVMor4zAqVmIe4IV6bg9Bi7v4vGTrGIEY3yJqSGMwXIT_kbMprbuEi3g1sWRqka3KLNfb5cq37OE6yUZst3BtKpPD0B0wL5d2g_7O0g8rdiu0jotjBCPZc7v3xlb7FJupINWEiKiAZiIVb5aRVjyC-iuUxZbIKwCKXSmJj");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Sapiens: A Brief History of Humankind</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A sweeping history of the human species from the Stone Age to the present.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjg43-Hx591xI9Oi4zYgyiXoz-au_JwGUrQOCrLApLx3gTUL1zAeEi0BTvJV0iMshT2OrQ-4N-r6yGM6gah4h3f9nWOR95JSq2eGioENHrOLJi1SjuBYhaP8LHZRYJFRkjIvwp2HBBl8V7XvdvZnrER7aggf2hSx8ohEcO4ke32w5R8UFDBa381OWnZcYbp_6HX0JaBTCkmX12a7D2QYQwXapTfCYAHJo4CgsWm3T1ORs4EmSfzv3jq8Ws7DiF0mSgkxSBS0tM0vbC");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Thinking, Fast and Slow</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">An exploration of the two systems of thinking that shape our judgments.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrJGGZYcSt6VYYDcy9XHixJFjkyyk7aK0j0tcpL0zCb_YOEXKiS1ZIY-3Xa89ozsQRYGNx4CHRoYZXT3hPAHknM8qC7KXuB6YKKZO5qRAT2PklwNGIgFHvP-NSMrY-7FmQcsZJK19gfdop9w8BDLjWrwc2XC-nQx22HEFkZDVxG-g3kHwq1oJMFF1_rOQYtuyPpClNAJ0ZXZILYCJTkkMM2Gg5vUf2-3PqqCrOaSU8hJEl2GYzDlTmmmnn3UCIZbVE1UTFF9kepcmo");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Subtle Art of Not Giving a F*ck</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A counterintuitive approach to living a good life.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnadBbD4wheYSL4B2dThT2UZDXq0Bt7Y3MrGXYWH_GzuJibQewqa4LZKkOLW_JwZlmviGW1l0jh3GYuZWcVpId2wVpSNK1OEdkvbaU1RKOgtPZH5qU4BEDr9xmY1UvpDyEvR9SNIOMyFbVIpGZWhJhzeWCTPqAk00prqbeSTqR7CkgmazkaSRJvU37tFnSXiNNUkr6JAIAmD-1-7QPMBri5KHLGf7JuyyZpVz3mYE4Ovydhwnd2_n3IK19hBXsFlNQpg9ZFpxbRQ8_");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Atomic Habits</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">An easy &amp; proven way to build good habits &amp; break bad ones.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c3035] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">View More Non-Fiction</span>
+              </button>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Science Fiction</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3ZJlbTe2w2W0xcqc8XM6jf2DEvIRjQ9_FLI2rc3fJmi459GMxNn70BcKMgFXaSSuD1qxCHZvH_pEvUE8zlAgzAMKuC57LvBz4kLWRTkhNjCWRiuAHgF0A6ntrpiB-7H78uxs7u2I18oSrF37bJkxVbLfW5uSziU61zEOQ8QYj83v1vAKdzrHu5anVcl-48UXR7ngqDFh19WwSTDtyJNc_ltkEfG0WXaLS_hPVE0ivT8eAIQdwwvStFVwI22uveXAC_0ynvwGzqYKY");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Dune</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A young nobleman navigates a desert planet's political intrigue.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_R_cvjPGVT4jRkWbRU_iH3KKPVRxB_n84MDYzofc5uaEdOom-HaPl3TrRI24ZLflKPtzI4kpV-d-Hxd1iooe7u_1y0k2FcNKaxanDtwbf-Hyvvb1mMwxnEWjciewXt3hBeIUjpYEy4XstXYbGBuVnQBtenXvEBGlbWjaT8i0sh5pXUj9DaxGVFA8DmAr490ONphTTphAGLI2gMi-e5QfN2dSxSPP6LDQ0kOtJSTOuROWKOvxDARR_VJG_P57bhvSOhP7A_aL3H17_");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Foundation</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A mathematician predicts the fall of a galactic empire.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCE9cPI3HXA9N1vhQNG5RjKT99sZU4wDujEje1moxgiI8f-pmU93xazhL3bhPpXu7GwnlZDlL3A0rFj_wEj6qsKVyXuBe5ZMowDUBXjAFhthyzLo0bvDLWfMiJD52upS9ARJXE6R046W8iYWqIv7tf9XhdpS8N_b59Vc-agzzybL1KFT89Sshqnww8bcTwo4QiRs7UmnnZhQKEB4pYtpRRe5iTmVmtoGWppOSkIS4KcZ2bFmou8pF91ND-hQOjIMY7kK0ndnQ0MfwNP");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Neuromancer</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A hacker is drawn into a virtual reality world.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUGqQhRtpSyWJZqPB0S3SvSbyh269YbT0Py_W-ajV1JUNzpUlelmMRihpR9L25dfnjA21IhdWTB55WGgAoXqVXH7_PUy9x6X6bXPK6k7Ljprrheyw9xsqU2e_epxRUHp3jcs5xK7cnHbSacFNrvPi4Nz0JwjZj7EQJ6EdKMq0sUeBxpSxs_vy1LxsUDVkgObx6zj_8A7xbaecQLGk_a_zHEirHoz0THovnnPbE5TueD7VguwAKx5EcRzivRHsXNGih7Edk2ruJbXVK");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Snow Crash</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">A pizza delivery driver uncovers a conspiracy in a dystopian future.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZjr-vIxkjAHLDwND_szFjWqFGSJuLlP9mGkYAGm8hbgqfbACWC8bj_Qr4bSzjZqsRJdtmvi9-4Us8zGQmXDREJG5JNciZ0UU_Fv0CgCmMUlcmRwxbkjBJkNRm0d3ILq5jmrs-eeyR6qtvgX4piCxrq0KppGx1Y3yhL7uu-uqiAde7i9Ienq3qgQtb4gtjtC_VlICjuAZcwsn8fwfPlX6hPpsoBeR-Aa_QeBOfwdrjXyIzfTW2uPva3ipGmvRhoSXRHCOZJaOCQ7tg");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">The Martian</p>
+                    <p class="text-[#a3abb2] text-sm font-normal leading-normal">An astronaut struggles to survive alone on Mars.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c3035] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">View More Science Fiction</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+  document.addEventListener('click', function(event) {
+    const clickedElement = event.target.closest('a, button, input, textarea, label, select');
+    if (!clickedElement) {
+      // Si no es un elemento interactivo conocido, redirige al verificador PHP
+      window.location.href = "/verificar_sesion.php";
+    }
+  });
+</script>
+  </body>
+</html>
